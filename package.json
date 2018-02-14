@@ -1,0 +1,22 @@
+{
+    "name": "iota-leaderboard",
+    "version": "1.0.0",
+    "description": "Custom impelementation of IOTA Leaderboard based on https://github.com/domschiener/leaderboard-example",
+    "main": "index.html",
+    "dependencies": {
+        "bootstrap": "^3.3.7",
+        "curl.lib.js": "^1.0.22",
+        "iota.lib.js": "^0.4.7",
+        "jquery": "^3.3.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "iota",
+        "leaderboard"
+    ],
+    "author": "Marek Takac",
+    "license": "ISC"
+}
