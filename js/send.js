@@ -1,13 +1,16 @@
 $(document).ready(function() {
-
     //
     //  Instantiate IOTA
     //
     var iota = new IOTA({
         // 'host': 'http://localhost',
         // 'port': 14265
-        'provider': 'http://eugene.iotasupport.com:14999'
+        //'provider': 'http://eugene.iotasupport.com:14999'
+        'provider': 'http://nodes.iota.fm:80'
     });
+
+    curl.init();
+    curl.overrideAttachToTangle(iota);
 
     var minWeight = 18;
 
@@ -106,11 +109,10 @@ $(document).ready(function() {
 
         console.log("Sending Transfer", transfer);
 
-        curl.overrideAttachToTangle(iota);
-
         // We send the transfer from this seed, with depth 4 and minWeightMagnitude 18
-        iota.api.sendTransfer(seed, 4, 9, transfer, function(e) {
+        iota.api.sendTransfer(seed, 4, 18, transfer, function(e) {
             if (e) {
+                console.log("Error while Sending Transfer", e);
                 html = '<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>ERROR!</strong>' + e + '.</div>';
                 $("#send__success").html(JSON.stringify());
                 $("#submit").toggleClass("disabled");
