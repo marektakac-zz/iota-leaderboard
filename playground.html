@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>IOTA Playground</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Galada|Ubuntu:400,500,700" rel="stylesheet">
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/playground.css" rel="stylesheet">
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/iota.lib.js/dist/iota.min.js"></script>
+    <script type="text/javascript" src="./js/curl.min.js"></script>
+
+    <script type="text/javascript" src="js/helpers.js"></script>
+    <script type="text/javascript" src="js/playground.js"></script>
+</head>
+
+<body>
+    <main>
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                <!-- iota.api.getNodeInfo() -->
+                <div id="get-node-info" class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">iota.api.getNodeInfo()</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-10">Press the button to get information on the node</div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-sm btn-primary">Get</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="waiting">
+                                    <ul class="bokeh">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 error"></div>
+                                <pre class="col-md-12 result"></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iota.api.findTransactionObjects() -->
+                <div id="find-tx" class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">iota.api.findTransactionObjects()</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" placeholder="Bundle hash">
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-sm btn-primary">Find</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="waiting">
+                                    <ul class="bokeh">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 error"></div>
+                                <pre class="col-md-12 result"></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
