@@ -3,16 +3,13 @@ $(document).ready(function() {
     //  Instantiate IOTA
     //
     var iota = new IOTA({
-        // 'host': 'http://localhost',
-        // 'port': 14265
-        //'provider': 'http://eugene.iotasupport.com:14999'
         'provider': 'http://nodes.iota.fm:80'
     });
 
     curl.init();
     curl.overrideAttachToTangle(iota);
 
-    var minWeight = 18;
+    var minWeight = 14;
 
     var seed;
     var balance = 0;
