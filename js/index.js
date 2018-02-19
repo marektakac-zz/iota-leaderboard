@@ -2,8 +2,7 @@ $(document).ready(function() {
 
     //  Instantiate IOTA with a provider
     var iota = new IOTA({
-        'provider': 'http://eugene.iotasupport.com:14999'
-            //'provider': 'http://field.carriota.com:80'
+        'provider': 'http://nodes.iota.fm:80'
     });
 
     var seed;
