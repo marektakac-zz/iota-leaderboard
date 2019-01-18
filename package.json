@@ -4,7 +4,7 @@
     "description": "Custom impelementation of IOTA Leaderboard based on https://github.com/domschiener/leaderboard-example",
     "main": "index.html",
     "dependencies": {
-        "bootstrap": "^3.3.7",
+        "bootstrap": "^3.4.0",
         "iota.lib.js": "^0.4.7",
         "jquery": "^3.3.1"
     },
